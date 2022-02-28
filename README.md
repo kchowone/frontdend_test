@@ -19,6 +19,8 @@
 - git commit -m "설명" : 첨부자료 설명 첨부 / 제목
 - git push : 내보내기 / 업로드
 - git pull : 가져오기
+- git config --global user.name "your name" : 보내는 사람 이름
+- git config --global user.email "email@"
 ---
 
 ## vim 
@@ -40,3 +42,4 @@
 7. Refactor : 코드 리팩토링에 대한 커밋
 8. Test : 테스트 코드 수정에 대한 커밋
 9. Chore : 그 외 자잘한 수정에 대한 커밋 (빌드스크립드 수정 등)
+---
