@@ -19,8 +19,9 @@
 - git commit -m "설명" : 첨부자료 설명 첨부 / 제목
 - git push : 내보내기 / 업로드
 - git pull : 가져오기
-- git config --global user.name "your name" : 보내는 사람 이름
-- git config --global user.email "email@"
+>제일 먼저 해야할것
+>- git config --global user.name "your name" : 보내는 사람 이름
+>- git config --global user.email "email@"
 ---
 
 ## vim 
