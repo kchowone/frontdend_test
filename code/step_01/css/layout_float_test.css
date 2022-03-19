@@ -1,0 +1,68 @@
+@charset "UTF-8" ;
+/* layout_float_test.css */
+
+body{margin: 0;}
+
+#wrap{width: 900px; height: auto;
+min-height: 500px;
+max-height: 3000px;
+margin: 0 auto;
+padding-bottom: 300px;
+background-color: #58BD81;}
+
+.box{width: 600px; height: 600px; margin: 0 auto;}
+
+.inner_01{background-color: #456ea2;}
+.inner_02{background-color: #fff9eb;}
+.inner_03{background-color: #ffcf5d;}
+
+.inner_01 >.insert{background-color:#ffcf5d;}
+.inner_02 >.insert{background-color:#db5446;}
+.inner_03 >.insert{background-color:#7e94ff;}
+
+/* ------.box_01------ */
+.box_01 > div{width: 100%; height: 200px;}
+
+/* ------.box_02------ */
+.box_02 > div{width: 200px;height:100%;float: left;}
+
+.box_02:after,
+.box_02::after{content: "";display: block;clear: both;width: 100%;height: 0;}
+
+/* ------.box_03------ */
+.box_03 > div{width: 200px; height: 50%;margin: 0 auto;}
+
+/* ------.box_04------ */
+.box_04{height: auto; min-height: 200px;}
+.box_04 > div{width: 100%; height: 200px;}
+.box_04 .insert{width:60%;height: 200px;margin:0 auto;}
+.box_04 > .inner_02 > .insert{width: 45%;}
+.box_04 > .inner_03 > .insert{ margin: 0; }
+
+/* ------.box_05------ */
+.box_05{height: auto;}
+.box_05 > div {width: 200px; height: 600px; float: left;}
+.box_05 .insert{width: 100%; height: 200px;}
+.box_05 > .inner_02 >.insert{margin-top: 200px;}
+.box_05 > .inner_03 >.insert{margin-top: 400px;}
+
+.box_05:after,
+.box_05::after{content: "";display: block;clear: both; width: 100%;height: 0;}
+
+/* ------.box_06------ */
+.box_06{height: auto;}
+.box_06 > div{width:100%; height: auto;}
+.box_06 .insert{width: 230px; height: 200px; float: left;}
+
+.box_06 > .inner_01 > .insert_02{float: right; background-color: #792F77;}
+
+.box_06 > .inner_02 > .insert_01{background-color: #ACF35A;}
+.box_06 > .inner_02 > .insert_02{width: 140px;background-color: #08A993;}
+.box_06 > .inner_02 > .insert_03{background-color: #4489A2;}
+.box_06 > .inner_02{background-color: transparent;}
+
+.box_06 > .inner_03 > .insert_01{width: 370px;background-color: #B8D8F1;}
+.box_06 > .inner_03 > .insert_02{background-color: #1FBF4A;}
+
+.box_06:after,
+.box_06::after{content: "";display: block;clear: both;width: 100%; height: 0;}
