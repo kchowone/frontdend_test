@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* layout_01.css */
+
+body{background-color: #000070;}
+
+#wrap{width: 600px; height: 500px;
+margin: 0 auto;
+margin-top:100px;
+background-color: #aaffaa;
+font-size: 100px;
+font-weight: 900;
+text-align: center;
+line-height: 500px;
+color: #000070;}
