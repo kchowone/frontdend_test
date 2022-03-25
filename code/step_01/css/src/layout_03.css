@@ -9,7 +9,28 @@ margin: 0 auto;
 margin-top: 100px;
 background-color: antiquewhite;}
 
-#header{width: 100%;height: 100px;background-color: #1FFFB1;}
+#header{width: 100%;height: 100px;background-color: #ff0077;}
+
+#header > h1{width: 120px; height: 100px;
+background-color: #c5dae8;float: left;
+margin: 0;}
+
+#header:after,
+#header::after{content: "";display: block;clear: both;width: 100%; height: 0;}
+
+#header > .navigation{width: 400px; height: 100px;
+background-color:#ffff00;
+float: right;}
+
+#header > div > ul{list-style: none;
+margin: 0;
+}
+#header > div li{
+background-color: #000070;
+width:50px;
+height: 100px;
+display: inline-block;}
+
 
 #section > div{height: 300px;float: left;}
 #section > .sect_01{width: 40%; background-color: #329664;}
@@ -17,5 +38,55 @@ background-color: antiquewhite;}
 #section:after,
 #section::after{content: "";display: block;clear: both;width: 100%;height: 0;}
 
-#footer{width: 600px;height: 100px;background-color: #BEC09B;}
+
+#aside{width: 100%; height: 300px;}
+#aside > div {height: 300px;float: left;}
+#aside > .side_01{width:33.333333%;background-color: #adaadd;}
+#aside > .side_02{width:33.333334%;background-color: #607259;}
+#aside > .side_03{width:33.333333%;background-color: #ad6fdd;}
+
+#aside:after,
+#aside::after{content: "";display:block; clear: both;width: 100%;height: 0;;}
+
+#article{width:100%; height: 300px;}
+
+#article > div{border:10px solid #d6e700;
+  box-sizing: border-box;}
+
+#article > .art_01{width: 30%;height:100%;
+ float: left; background-color: #27294d;}
+
+#article > .art_02,
+#article > .art_03{width:70%;height:50%; float:right;
+  border-left: 0;}
+#article > .art_02{background-color: #ff7259; border-bottom: 0;}
+#article > .art_03{background-color: #ad6fdd;}
+#article:after,
+#article::after{content: "";display: block; clear: both;
+  width: 100%;height: 0;}
+
+#content{width: 100%; height: 500px;}
+
+#content > div {height:100%;}
+
+#content > .art_area{width: 70%;float: left;}
+
+#content > .art_01{width: 30%;float: right; background-color:#27294d;;}
+
+#content > .art_area > .art_02,
+#content > .art_area > .art_03{width:100%;}
+
+#content > .art_area > .art_02{height: 150px;background-color: #ff7259;}
+
+#content > .art_area > .art_03{height:350px;background-color: #ad6fdd;}
+
+#content:after,
+#content::after{content:"";display:block; clear: both;
+  width: 100%; height: 0;}
+
+#content > .art_area:after,
+#content > .art_area::after{content: ""; display: block;clear: both;width: 100%;
+  height: 0;}
+
+#footer{width: 600px;height: 100px;background-color: ##6F828D;}
 
