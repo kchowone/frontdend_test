@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* spomsorBox.css */
+/* #sponsorBox======================*/
+#sponsorBox{width:100%; height: 100px;
+  padding-top: 10px; box-sizing: border-box;
+  background-color: #777;}
+
+#sponsorBox .width_row{height: 80px;
+overflow: hidden;
+}
+
+.spon-container{width:200%;height: 100%;
+background-color:#fff;}
+
+.spon-container li{
+  float: left;
+  width:140px; height: 80px;
+  margin-right: 20px;
+  background-color:#07c4c4;}
+
+  .spon-container li:last-child{margin-right: 0;}

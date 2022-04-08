@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* newBox.css */
+/* #newBox=======================*/
+#newBox{width:100%;height: 700px;
+  padding-top: 62px;
+  box-sizing: border-box;
+  background-color: #333;}
+
+.area_title{width: 940px; height: 70px;
+margin:auto;
+background-color:#aaa;}
+
+.area_indicator{position: absolute;bottom:-80px;left: 0;right:0;margin:auto;
+width:140px; height: 30px;
+background-color:#fa0;
+}
+
+.area_content{width:100%; height: 370px;
+background-color: #c4c4c4;}
+
+.area_content > li {float: left;
+width:353px;height:370px;
+margin-right:20px;
+background-color:#07c4c4;
+
+}
+.area_content li:nth-child(3){margin-right: 0;}

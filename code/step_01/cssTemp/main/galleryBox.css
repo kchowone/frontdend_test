@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* galleryBox.css */
+
+/* #galleryBox================== */
+#galleryBox{width:100%; height: 750px;
+  padding-top: 75px;
+  box-sizing: border-box;
+  background-color:#c4c4c4;}
+  
+  #galleryBox .area_title{margin-bottom: 48px;
+    background-color: #fff;}
+  
+  #galleryBox .area_content{
+  position: relative;
+  height: 420px;
+  background-color: #555;}
+
+  #galleryBox .img-container{width: 540px;height: 420px;
+  background-color:#07c4c4;}
+
+  .list-container{
+    position: absolute; bottom: 0;right: 0;
+    width: 320px; height: 270px;
+    background-color: #07c4c4;}
+
+  
