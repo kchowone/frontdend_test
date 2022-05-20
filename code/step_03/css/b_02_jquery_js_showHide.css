@@ -3,7 +3,9 @@
 
 #wrap{width: 100%; height: auto;
 box-sizing: border-box;
-padding: 1rem;}
+padding: 1rem;
+border-bottom:10px solid #fda;
+padding-bottom: 20px;}
 
 h1{border-bottom: 1px solid #000;
 margin-bottom: 1rem;
