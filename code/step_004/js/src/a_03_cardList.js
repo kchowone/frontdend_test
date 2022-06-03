@@ -23,10 +23,11 @@ const sourcePath = {img: '../img/', font:'../fonts/'};
 const dataFile = '../data/drink_menu_list.json';
 const elMenuItems = document.querySelector('.content__part__menu_type');
 let elMenuUl = elMenuItems.querySelector('ul')
-let elMenuList = elMenuUl.querySelectorAll('li');
+let elMenuList; // = elMenuUl.querySelectorAll('li');
 
 const elItems = document.querySelector('.content__area__menu__items');
 let elItemsUl;
+let TABCOUNT = 0;
 
 // 함수 ---------------------------------------------------------------------
 // 탭메뉴 리스트 기능
@@ -79,6 +80,13 @@ const fnmakeLi = function(obj){
   elItemsUl.append(makeLi);
 };
 
+// 선택된 li요소의 위치에 class이름(.action) 활성화, 나머지 비활성화.
+const fnAddActive = function(n){
+  elMenuList.forEach((el, index)=>{
+    (index === n) ? el.classList.add('action') : el.classList.remove('action');
+  });
+}
+
 // 함수기능 우선 수행 ------------------------------------------------------------
 
 
@@ -88,13 +96,17 @@ fetch(dataFile)
 .then(function(data){
   //탭 리스트
   let  arrTabList = [];
-  data.forEach(function(d){
-    let check = arrTabList.includes(d.category);
-    if(!check){arrTabList.push(d.category);}
-  });
+  // data.forEach(function(d){
+  //   let check = arrTabList.includes(d.category);
+  //   if(!check){arrTabList.push(d.category);}
+  // });
 
-  console.log(arrTabList);
-  
+  data.filter(d =>{
+    let check = arrTabList.indexOf(d.category) === -1;
+    if(check){arrTabList.push(d.category);}
+  });
+  // console.log(arrTabList); 
+
   elMenuItems.innerHTML = '<ul></ul>';
   elMenuUl = elMenuItems.querySelector('ul')
   let tabLi;
@@ -105,29 +117,30 @@ fetch(dataFile)
     console.log(tabLi);
   })
   
-  // elMenuList = elMenuUl.querySelectorAll('li');
-  
+
   
   // 탭 내용 처리
   const fnFilterContent = (menu) =>{
-  let m = menu || '커피류';
-  const dataFilter = fnCategoryFilter(m,data);//console.log( dataFilter);
- 
-  elItems.innerHTML = '<ul></ul>';
-  elItemsUl = elItems.querySelector('ul');
-  
+  let m = menu || 0;
+  const dataFilter = fnCategoryFilter(arrTabList[m] , data);//console.log( dataFilter);
   fnMakeUl();
   dataFilter.forEach(fnmakeLi);
+ 
   };
 
+  elMenuList = elMenuUl.querySelectorAll('li');
   fnFilterContent();
+  fnAddActive(TABCOUNT);
 
   elMenuList.forEach((el,index)=> {
     el.addEventListener('click',function(e){
       e.preventDefault();
-      console.log(e.target.innerText);// 두개 차이 알기
-      const menuName = e.target.textContent;
+      // console.log(e.target.innerText);// 두개 차이 알기
+      // const menuName = e.target.textContent;
+      // fnFilterContent(menuName);
       fnFilterContent(index);
+      TABCOUNT = index;
+      fnAddActive(TABCOUNT);
     });
   });
    
