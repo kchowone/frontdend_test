@@ -2,7 +2,7 @@
 /* common.css */
 
 .blind{display: block;
-  position: absolute; z-index: -1;
+  position: absolute; z-index: -1; clip: rect(0,0,0,0);
   width: 0;height: 0;overflow: hidden;}
 
   /* IR 기법 참조 */
